@@ -1,0 +1,17 @@
+name: Scripted Resource Model Source Example Plugin
+version: 1.0
+rundeckPluginVersion: 1.0
+author: Daniel Heath
+date: 09/04/2016
+providers:
+    - name: rundeck-resource-model-source-example
+      service: ResourceModelSource
+      plugin-type: script
+      script-interpreter: bash -c
+      script-file: nodes.sh
+      resource-format: resourceyaml
+      config:
+        - type: String
+          name: url
+          title: URL
+          description: This setting will be a configurable option
